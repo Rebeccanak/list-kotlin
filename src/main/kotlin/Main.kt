@@ -1,6 +1,6 @@
 fun main() {
 println(getStrings(listOf("a","b",",c","d","e","g","h","i","j","k")))
-    println(getHeight(listOf(10,14,20,12,4,6,18)))
+    println(calculateHeight(listOf(10.0,14.0,20.0,12.0,4.0,6.0,18.0)))
     println(crudential())
     val averageMileage = averageMileage(cars)
     println("Average mileage: $averageMileage")
@@ -22,11 +22,17 @@ fun getStrings(name:List<String>):List<String>{
 //Given a list of people’s heights in metres. Write a function that returns
 //the average height and the total height
 
-fun getHeight(height:List<Int>):String{
-    var high = height.average()
-    var n = height.sum()
-    var k = "the avaerage $high and the sum is $n"
-    return k
+class AverageHeight(var avg:Double, var plus:Double)
+fun calculateHeight(heights:List<Double>):List<Double>{
+    val totalHeight=heights.sum()
+    var average= totalHeight/heights.size
+    var all= listOf(totalHeight,average)
+    return all
+//fun getHeight(height:List<Int>):String{
+//    var high = height.average()
+//    var n = height.sum()
+//    var k = "the avaerage $high and the sum is $n"
+//    return k
 }
 //Given a list of Person objects, each with the attributes, name, age,
 //height and weight. Sort the list in order of descending age
@@ -47,6 +53,7 @@ fun crudential(){
 //Given a list similar to the one above, write a function in which you will
 //create 2 more people objects and add them to the list at one go.
 
+
 //Write a function that takes in a list of Car objects each with a
 //registration and mileage attribute and returns the average mileage of
 //all the vehicles in the list.
@@ -66,8 +73,8 @@ val cars = listOf(
 )
 
 //   fun getCars(list: List<Car>){
-//       var mileage = 0.0
-//       var
+//
+//
 //       var Car = listOf(list)
 //       val v = list.
 ////       val wish = Car("r20",5)
