@@ -60,9 +60,9 @@ fun averageMileage(cars: List<Car>): Double {
     return totalMileage / cars.size }
 
 val cars = listOf(
-        Car("ABC123", 10000.0),
-        Car("DEF456", 20000.0),
-        Car("GHI789", 15000.0)
+        Car("ABC123", 2500.0),
+        Car("DEF456", 3750.0),
+        Car("GHI789", 4000.0)
 )
 
 //   fun getCars(list: List<Car>){
