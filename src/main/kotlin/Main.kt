@@ -2,6 +2,8 @@ fun main() {
 println(getStrings(listOf("a","b",",c","d","e","g","h","i","j","k")))
     println(getHeight(listOf(10,14,20,12,4,6,18)))
     println(crudential())
+    val averageMileage = averageMileage(cars)
+    println("Average mileage: $averageMileage")
 
 }
 
@@ -49,9 +51,35 @@ fun crudential(){
 //registration and mileage attribute and returns the average mileage of
 //all the vehicles in the list.
 
-data class Car(var registration:Int,var mileage:Int):Int{
-//    fun getCars(list: List<Car>){
+data class Car(var registration:String,var mileage:Double)
+fun averageMileage(cars: List<Car>): Double {
+    var totalMileage = 0.0
+    for (car in cars) {
+        totalMileage += car.mileage
+    }
+    return totalMileage / cars.size }
+
+val cars = listOf(
+        Car("ABC123", 10000.0),
+        Car("DEF456", 20000.0),
+        Car("GHI789", 15000.0)
+)
+
+//   fun getCars(list: List<Car>){
+//       var mileage = 0.0
+//       var
+//       var Car = listOf(list)
+//       val v = list.
+////       val wish = Car("r20",5)
+////       val ford = Car("K27",20)
+//       val hammer = Car("UK5",15)
+//       var allAccounts = listOf(wish,ford,hammer)
 //
+
+
+
+
+
 //    }
 //
 //}
